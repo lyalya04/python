@@ -8,7 +8,7 @@ def start(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton('Перейти на наш сайт💻')
     markup.add(btn1)
-    btn2 = types.KeyboardButton('Направления🏃‍♀️')
+    btn2 = types.KeyboardButton('Доступные направления🏃‍♀️')
     btn3 = types.KeyboardButton('Стоимость занятий💸')
     markup.add(btn2, btn3)
     btn4 = types.KeyboardButton('Контакты📞')
@@ -17,7 +17,7 @@ def start(message):
     markup.add(btn5)
     photo = open('icon2.jpg', 'rb')
     bot.send_photo(message.chat.id, photo)
-    bot.send_message(message.chat.id, '<b><em><u>ДОБРО ПОЖАЛОВАТЬ В КЛУБ АЛЬБАТРОС  "ЮГ"🏋️‍♂️</u> , ЧТО ВАС ИНТЕРЕСУЕТ?</em></b>', reply_markup=markup,parse_mode='html')
+    bot.send_message(message.chat.id, '<b><em><u>ДОБРО ПОЖАЛОВАТЬ В КЛУБ АЛЬБАТРОС  "ЮГ"🏋️‍♂️</u> , я могу помочь вам с информацией о ценах, направлениях и контактах фитнес зала. Выберите опцию в меню.</em></b>', reply_markup=markup,parse_mode='html')
 
 
 @bot.message_handler(content_types=['text'])
@@ -45,7 +45,7 @@ def func(message):
         markup.add(btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8)
         bot.send_message(message.chat.id,'Абонемент действителен в течении 30 календарных дней с момента активации📆', reply_markup=markup)
 
-    elif (message.text == 'Направления🏃‍♀️'):
+    elif (message.text == 'Доступные Направления🏃‍♀️'):
         markup = types.InlineKeyboardMarkup(row_width=1)
         btn11 = types.InlineKeyboardButton('Кардио-зона', callback_data='btn11')
         btn22 = types.InlineKeyboardButton('Тренажёрный зал', callback_data='btn22')
