@@ -45,7 +45,7 @@ def func(message):
         markup.add(btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8)
         bot.send_message(message.chat.id,'Абонемент действителен в течении 30 календарных дней с момента активации📆', reply_markup=markup)
 
-    elif (message.text == 'Доступные Направления🏃‍♀️'):
+    elif (message.text == 'Доступные направления🏃‍♀️'):
         markup = types.InlineKeyboardMarkup(row_width=1)
         btn11 = types.InlineKeyboardButton('Кардио-зона', callback_data='btn11')
         btn22 = types.InlineKeyboardButton('Тренажёрный зал', callback_data='btn22')
