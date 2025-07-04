@@ -25,7 +25,7 @@ def func(message):
     if (message.text == 'Где мы находимся📍'):
         bot.send_message(message.chat.id, text='<u><b><em>Г.КАЛИНИНГРАД, ТОВАРНЫЙ ПЕРЕУЛОК, 5</em></b></u>', parse_mode='html')
     elif (message.text == 'Контакты📞'):
-        bot.send_message(message.chat.id, text=f'<b><em>Наш номер телефона</em></b> +7 (4012) 526-731', parse_mode='html')
+        bot.send_message(message.chat.id, text=f'<b><em>Наш номер телефона</em></b> +7 (4012) 526-731, <b><em>каждый день с 06:00–23:00</em></b>', parse_mode='html')
     elif (message.text == 'Перейти на наш сайт💻'):
         markup = types.InlineKeyboardMarkup(row_width=1)
         btn12 = types.InlineKeyboardButton('Перейти💻', url='https://ug.albagym.ru/')
